@@ -1,14 +1,32 @@
+package com.projetono;
+
 public class No {
 
-    int valor;
-    No proximo;
+    private String conteudo;
+    private No proximoNo;
 
-    public No(int valor) {
-        this.valor = valor;
-        this.proximo = null;
+    public No(String conteudo) {
+        this.conteudo = conteudo;
+        this.proximoNo = null;
+    }
+    public String getConteudo() {
+        return conteudo;
+    }
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
     }
 
-    public int getValor() {
-        return valor;
+    public No getProximoNo() {
+        return proximoNo;
     }
+
+    public void setProximoNo(No proximoNo) {
+        this.proximoNo = proximoNo;
+    }
+    @Override
+    public String toString() {
+        return "No{" +
+                   "conteudo='" + conteudo + '\'' +  '}';
+    }
+
 }
